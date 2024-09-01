@@ -17,7 +17,7 @@ class TaskComparator implements Comparator<Task>{
 }
 
 class TaskManager{
-    PriorityQueue<Task> tm= new PriorityQueue<>();
+    PriorityQueue<Task> tm= new PriorityQueue<>(new TaskComparator());
 
     void addTask(Task t){
         tm.add(t);
