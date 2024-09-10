@@ -24,6 +24,10 @@ class TextBook extends Book{
         borrowedUser="";
     }
     public void checkIn(String name){
+        if (status.equals("Borrowed")){
+            System.out.println("Book unavailable");
+            return;
+        }
         status="Borrowed";
         borrowedUser=name;
     }
