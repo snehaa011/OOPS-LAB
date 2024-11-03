@@ -46,7 +46,7 @@ class ElectionPost implements SortVotes{
     public void ascendDisplay(){
         for (int i=0; i<listOfCandidates.size(); i++){
             for (int j=i+1; j<listOfCandidates.size(); j++){
-                if ((count.get(listOfCandidates.get(i))>count.get(listOfCandidates.get(j))) || (count.get(listOfCandidates.get(i))==null && count.get(listOfCandidates.get(j))!=null)){
+                if ((count.get(listOfCandidates.get(i))>count.get(listOfCandidates.get(j))) || (count.get(listOfCandidates.get(i))!=null && count.get(listOfCandidates.get(j))==null)){
                     String temp=listOfCandidates.get(i);
                     listOfCandidates.set(i, listOfCandidates.get(j));
                     listOfCandidates.set(j, temp);
@@ -64,7 +64,7 @@ class ElectionPost implements SortVotes{
     public void descendDisplay(){
         for (int i=0; i<listOfCandidates.size(); i++){
             for (int j=i+1; j<listOfCandidates.size(); j++){
-                if ((count.get(listOfCandidates.get(i)) < count.get(listOfCandidates.get(j))) || (count.get(listOfCandidates.get(i))!=null && count.get(listOfCandidates.get(j))==null)){
+                if ((count.get(listOfCandidates.get(i)) < count.get(listOfCandidates.get(j))) || (count.get(listOfCandidates.get(i))==null && count.get(listOfCandidates.get(j))!=null)){
                     String temp=listOfCandidates.get(i);
                     listOfCandidates.set(i, listOfCandidates.get(j));
                     listOfCandidates.set(j, temp);
